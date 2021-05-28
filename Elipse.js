@@ -1,6 +1,7 @@
 class Elipse{
     constructor(x,y){
 
+        rectS = new Rectangulos();
         rectAbajo = new ReactanguloAbajo();
         this.x = 500;
         this.y = 876;
@@ -8,11 +9,9 @@ class Elipse{
         this.velX = Math.random(-1,6);
         if(this.direccionY == 0){
             this.velY = 1;
-        }else {
+        }else{
             this.velY = -8;
         }
-
-
     }
 
     mostrar(){
@@ -23,23 +22,31 @@ class Elipse{
         this.y = this.y + this.velY;
         ellipse(this.x,this.y,50,50);
 
-        if (this.x > 1000 || this.x < 0) {
+        if (this.x > 1000 || this.x < 0){
 			this.velX = this.velX * -1;
 		}
-		if (this.y < 0) {
+		if (this.y < 0){
 			this.velY = this.velY * -1;
 		}
+        if(this.y > 1000){
+            fill(255);
+            textSize(50);
+            text("Perdiste xD", 350,700);
+        }
 		if (dist(this.x, this.y, rectAbajo.xR, rectAbajo.yR) < 50) {
 			this.velX = this.velX * -1;
 			this.velY = this.velY * 1;
 		}
 		
-		}
+	}
 
-    
+    getX() {
+        return this.x;
+    }
 
-
-
+    getY() {
+        return this.y;
+    }
 
 
 }

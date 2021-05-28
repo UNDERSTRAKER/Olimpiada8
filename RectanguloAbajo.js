@@ -29,6 +29,14 @@ class ReactanguloAbajo{
             }
         }
     }
+
+    getX() {
+        return this.xR;
+    }
+
+    gety() {
+        return this.yR;
+    }
                     
 
 

@@ -1,11 +1,7 @@
 
 let rectAbajo = new ReactanguloAbajo();
-let rectS = new Rectangulos();
+let rectS = new Rectangulos(200,200);
 let eli = new Elipse();
-
-
-
-
 
 function setup() {
   createCanvas(1000, 1000);
@@ -16,12 +12,16 @@ function draw() {
   eli.mostrar();
   rectAbajo.mostrar();
   rectAbajo.mover();
-  //rectS.mostrar();
-  
+  rectS.mostrar();
   
   
 }
 
+function validarGolpeRectAbajo(rectA, eli) {
+    if(rectA.getX()){
 
-  
+    }
+
+
+}
 
